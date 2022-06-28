@@ -19,10 +19,10 @@ A Flutter package for sewa project. Its purpose is to provide all models and enu
 
 ```pubspec.yaml
 dependencies: 
-  sewa_model: any
+  utils_widget: any
 ```
 
 ## Example
 ```dart
-import 'package:utils/utils.dart';
+import 'package:utils_widget/utils_widget.dart';
 ```

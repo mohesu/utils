@@ -1,3 +1,7 @@
+## 0.0.3
+
+* Name changed.
+
 ## 0.0.2
 
 * update readme.
