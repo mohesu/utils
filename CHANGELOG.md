@@ -1,3 +1,11 @@
+## 0.0.8
+
+* Custom toast added
+
+## 0.0.7
+
+* InputDecoration updated
+
 ## 0.0.6
 
 * file exported

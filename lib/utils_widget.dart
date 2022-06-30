@@ -22,6 +22,8 @@ export 'src/custom_stuff/empty_widget.dart';
 export 'src/custom_stuff/links.dart';
 export 'src/custom_stuff/widget_helper.dart';
 export 'src/custom_stuff/appointment_bottom_card.dart';
+export 'src/custom_stuff/custom_animation_toast.dart';
+export 'src/custom_stuff/ios_toast.dart';
 export 'src/other/functions.dart';
 export 'src/other/input_decoration.dart';
 export 'src/other/logo_tagline.dart';
