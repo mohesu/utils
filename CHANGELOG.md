@@ -1,3 +1,7 @@
+## 0.0.6
+
+* file exported
+
 ## 0.0.5
 
 * card updated
