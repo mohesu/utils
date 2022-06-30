@@ -4,16 +4,18 @@ class BottomCard extends StatelessWidget {
   final String title;
   final String subtitle;
   final String cardName;
-  final void Function() onViewInfo;
-  final void Function() onDeleteInfo;
-  final void Function() onEditInfo;
+  final void Function()? onViewInfo;
+  final void Function()? onDeleteInfo;
+  final void Function()? onEditInfo;
+  final double? height;
   const BottomCard({
     Key? key,
     required this.title,
     required this.subtitle,
-    required this.onViewInfo,
-    required this.onDeleteInfo,
-    required this.onEditInfo,
+    this.onViewInfo,
+    this.onDeleteInfo,
+    this.onEditInfo,
+    this.height = 450,
     this.cardName = "Info",
   }) : super(key: key);
 
@@ -25,7 +27,7 @@ class BottomCard extends StatelessWidget {
         topRight: Radius.circular(22),
       ),
       child: SizedBox(
-        height: 450,
+        height: height,
         child: SingleChildScrollView(
           child: Column(
             children: [
@@ -48,43 +50,46 @@ class BottomCard extends StatelessWidget {
               ),
               const SizedBox(height: 20),
               const Divider(),
-              ListTile(
-                leading: const Icon(Icons.info),
-                title: Text(
-                  "View $cardName",
-                  style: const TextStyle(
-                    fontWeight: FontWeight.bold,
+              if (onViewInfo != null)
+                ListTile(
+                  leading: const Icon(Icons.info),
+                  title: Text(
+                    "View $cardName",
+                    style: const TextStyle(
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
+                  onTap: onViewInfo,
                 ),
-                onTap: onViewInfo,
-              ),
               const Divider(),
-              ListTile(
-                leading: const Icon(Icons.edit),
-                title: Text(
-                  "Update $cardName",
-                  style: const TextStyle(
-                    fontWeight: FontWeight.bold,
+              if (onEditInfo != null)
+                ListTile(
+                  leading: const Icon(Icons.edit),
+                  title: Text(
+                    "Update $cardName",
+                    style: const TextStyle(
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
+                  onTap: onEditInfo,
                 ),
-                onTap: onEditInfo,
-              ),
               const Divider(),
-              ListTile(
-                leading: const Icon(
-                  Icons.delete,
-                  color: Colors.red,
-                ),
-                title: Text(
-                  "Delete $cardName",
-                  style: const TextStyle(
+              if (onDeleteInfo != null)
+                ListTile(
+                  leading: const Icon(
+                    Icons.delete,
                     color: Colors.red,
-                    fontWeight: FontWeight.bold,
                   ),
+                  title: Text(
+                    "Delete $cardName",
+                    style: const TextStyle(
+                      color: Colors.red,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  onTap: onDeleteInfo,
                 ),
-                onTap: onDeleteInfo,
-              ),
-              const Divider(),
+              if (onDeleteInfo != null) const Divider(),
               ListTile(
                 leading: const Icon(Icons.cancel),
                 title: const Text(

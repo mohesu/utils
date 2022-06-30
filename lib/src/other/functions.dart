@@ -62,6 +62,21 @@ void showErrorNotice(String title, String message) {
   );
 }
 
+void showInfoNotice(String title, String message) {
+  showSimpleNotification(
+    Text(title),
+    subtitle: Text(message),
+    leading: LottieBuilder.asset(
+      "assets/lottie/info1.json",
+      repeat: true,
+    ),
+    background: Colors.blue.shade300,
+    position: NotificationPosition.bottom,
+    slideDismissDirection: DismissDirection.down,
+    duration: const Duration(seconds: 4),
+  );
+}
+
 Future<void> copyOnClipboard(String text) async {
   toast('Copied to clipboard:- $text');
   await Clipboard.setData(
