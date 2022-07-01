@@ -1,6 +1,6 @@
 name: utils_widget
 description: A Flutter utility library, including a collection of widgets and utilities.
-version: 0.0.9
+version: 0.0.9+1
 homepage: https://github.com/rvndsngwn/utils.git
 
 environment:
@@ -22,8 +22,7 @@ dependencies:
   intl: ^0.17.0
   google_fonts: ^3.0.1
   overlay_support: ^2.0.1
-  loading_icon_button: ^0.0.2
-
+  loading_icon_button: ^0.0.3
 
 dev_dependencies:
   flutter_test:
@@ -35,7 +34,6 @@ dev_dependencies:
 
 # The following section is specific to Flutter packages.
 flutter:
-
   # To add assets to your package, add an assets section, like this:
 
   assets:

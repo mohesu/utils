@@ -1,3 +1,7 @@
+## 0.0.9+1
+
+* loading_icon_button updated
+
 ## 0.0.9
 
 * loading_icon_button added
