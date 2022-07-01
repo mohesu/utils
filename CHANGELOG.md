@@ -1,3 +1,7 @@
+## 0.0.9
+
+* loading_icon_button added
+
 ## 0.0.8
 
 * Custom toast added
