@@ -5,7 +5,6 @@ class AppointmentStatusUpdateBottomCard extends StatelessWidget {
   final String subtitle;
   final String buttonText;
   final Color buttonColor;
-  final double? height;
   final Widget child;
   final void Function() onUpdate;
   const AppointmentStatusUpdateBottomCard({
@@ -16,20 +15,18 @@ class AppointmentStatusUpdateBottomCard extends StatelessWidget {
     this.child = const Divider(),
     required this.buttonText,
     this.buttonColor = Colors.green,
-    this.height = 370,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Material(
-      borderRadius: const BorderRadius.only(
-        topLeft: Radius.circular(22),
-        topRight: Radius.circular(22),
-      ),
-      child: SizedBox(
-        height: height,
-        child: SingleChildScrollView(
+    return SafeArea(
+      child: SingleChildScrollView(
+        padding: const EdgeInsets.symmetric(horizontal: 16),
+        child: AnimatedPadding(
+          duration: const Duration(milliseconds: 200),
+          padding: MediaQuery.of(context).viewInsets,
           child: Column(
+            mainAxisSize: MainAxisSize.min,
             children: [
               const SizedBox(height: 20),
               Icon(

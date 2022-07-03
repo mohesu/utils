@@ -1,3 +1,7 @@
+## 0.0.9+2
+
+* keyboard bug fixed
+
 ## 0.0.9+1
 
 * loading_icon_button updated

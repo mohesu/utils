@@ -1,6 +1,6 @@
 name: utils_widget
 description: A Flutter utility library, including a collection of widgets and utilities.
-version: 0.0.9+1
+version: 0.0.9+2
 homepage: https://github.com/rvndsngwn/utils.git
 
 environment:
