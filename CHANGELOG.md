@@ -1,3 +1,7 @@
+## 0.0.9+3
+
+* font_awesome_flutter new version added
+
 ## 0.0.9+2
 
 * keyboard bug fixed
