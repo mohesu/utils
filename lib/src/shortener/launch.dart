@@ -12,6 +12,7 @@ class LaunchUtils {
     if (await canLaunchUrlString(url)) {
       await launchUrlString(url);
     } else {
+      showErrorNotice("Error", "Could not launch the $url");
       throw 'Could not launch';
     }
   }
@@ -20,6 +21,7 @@ class LaunchUtils {
     if (await canLaunchUrlString("mailto:$email")) {
       await launchUrlString("mailto:$email");
     } else {
+      showErrorNotice("Error", "Could not launch the $email email");
       throw 'Could not launch';
     }
   }
@@ -33,11 +35,21 @@ class LaunchUtils {
       throw "Can't phone that number.";
     }
   }
+  
+  static launchMessage(String telephoneNumber, {String? message}) async {
+    String telephoneUrl = "sms:$telephoneNumber?body=$message";
+    if (await canLaunchUrlString(telephoneUrl)) {
+      await launchUrlString(telephoneUrl);
+    } else {
+      showErrorNotice("Error", "Could not launch the $telephoneNumber number");
+      throw "Can't message that number.";
+    }
+  }
 
-  static launchWhatsApp(whatsAppNumber) async {
+  static launchWhatsApp(String whatsAppNumber, {String message = "Hello"}) async {
     final String whatsAppUrl = Platform.isIOS
-        ? "whatsapp://wa.me/91$whatsAppNumber/?text=${Uri.encodeFull("Hi team mohesu, I'm using Mohesu server app")}"
-        : "whatsapp://send?phone=91$whatsAppNumber&text=${Uri.encodeFull("Hi team mohesu, I'm using Mohesu server app")}";
+        ? "whatsapp://wa.me/91$whatsAppNumber/?text=${Uri.encodeFull(message)}"
+        : "whatsapp://send?phone=91$whatsAppNumber&text=${Uri.encodeFull(message)}";
     try {
       await canLaunchUrlString(whatsAppUrl)
           ? await launchUrlString(whatsAppUrl)
