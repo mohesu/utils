@@ -9,8 +9,9 @@ class CustomCard extends StatelessWidget {
   final Widget? subWidget;
   final String title;
   final String? subTitle;
-  final Color colorLeft;
-  final Color colorRight;
+  final Color? colorLeft;
+  final Color? colorRight;
+  final Color? colorCenter;
   final void Function()? onTap;
   final void Function()? onMoreTap;
 
@@ -22,8 +23,9 @@ class CustomCard extends StatelessWidget {
     this.subWidget,
     required this.title,
     this.subTitle,
-    required this.colorLeft,
-    required this.colorRight,
+    this.colorLeft,
+    this.colorRight,
+    this.colorCenter,
     this.onTap,
     this.onMoreTap,
   }) : super(key: key);
@@ -48,6 +50,7 @@ class CustomCard extends StatelessWidget {
               alignment: Alignment.centerRight,
               children: [
                 CustomContainer(
+                  color: colorCenter,
                   blurRadius: 2,
                   onTap: onTap,
                   width: MediaQuery.of(context).size.width,

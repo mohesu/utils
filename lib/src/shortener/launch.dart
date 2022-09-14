@@ -1,4 +1,3 @@
-
 import 'package:universal_io/io.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
@@ -8,6 +7,7 @@ import 'logger.dart';
 class LaunchUtils {
   LaunchUtils._();
 
+  /// Opens the given [url] in the default browser.
   static launchUrl(url) async {
     if (await canLaunchUrlString(url)) {
       await launchUrlString(url);
@@ -17,6 +17,7 @@ class LaunchUtils {
     }
   }
 
+  /// Launch email app with given [email].
   static launchEmail(email) async {
     if (await canLaunchUrlString("mailto:$email")) {
       await launchUrlString("mailto:$email");
@@ -26,6 +27,7 @@ class LaunchUtils {
     }
   }
 
+  /// Launch the phone number.
   static launchPhone(telephoneNumber) async {
     String telephoneUrl = "tel:$telephoneNumber";
     if (await canLaunchUrlString(telephoneUrl)) {
@@ -35,7 +37,8 @@ class LaunchUtils {
       throw "Can't phone that number.";
     }
   }
-  
+
+  /// Launch Message app with the given [message].
   static launchMessage(String telephoneNumber, {String? message}) async {
     String telephoneUrl = "sms:$telephoneNumber?body=$message";
     if (await canLaunchUrlString(telephoneUrl)) {
@@ -46,10 +49,12 @@ class LaunchUtils {
     }
   }
 
-  static launchWhatsApp(String whatsAppNumber, {String message = "Hello"}) async {
+  /// Launch WhatsApp with the given [telephoneNumber] and [message].
+  static launchWhatsApp(String whatsAppNumber,
+      {String message = "Hello"}) async {
     final String whatsAppUrl = Platform.isIOS
-        ? "whatsapp://wa.me/91$whatsAppNumber/?text=${Uri.encodeFull(message)}"
-        : "whatsapp://send?phone=91$whatsAppNumber&text=${Uri.encodeFull(message)}";
+        ? "whatsapp://wa.me/$whatsAppNumber/?text=${Uri.encodeFull(message)}"
+        : "whatsapp://send?phone=$whatsAppNumber&text=${Uri.encodeFull(message)}";
     try {
       await canLaunchUrlString(whatsAppUrl)
           ? await launchUrlString(whatsAppUrl)
@@ -59,7 +64,7 @@ class LaunchUtils {
     }
   }
 
-  // launch telegram channel
+  /// Launch telegram app
   static launchTelegram(telegramChannel) async {
     final String telegramUrl = "https://t.me/$telegramChannel";
     try {
@@ -68,6 +73,18 @@ class LaunchUtils {
           : showErrorNotice("Error", 'Telegram can\'t launch.');
     } catch (e) {
       logger.e(e.toString());
+    }
+  }
+
+  /// Launch GeoPoint app with the given [latitude] and [longitude].
+  static launchGeoPoint(double latitude, double longitude) async {
+    final String url =
+        'https://www.google.com/maps/search/?api=1&query=$latitude,$longitude';
+    if (await canLaunchUrlString(url)) {
+      await launchUrlString(url);
+    } else {
+      showErrorNotice("Error", "Could not launch the $url");
+      throw 'Could not launch';
     }
   }
 }

@@ -5,7 +5,7 @@ import 'package:loading_icon_button/loading_icon_button.dart';
 import 'package:lottie/lottie.dart';
 import 'package:overlay_support/overlay_support.dart';
 
-// Global error line
+/// Global notice lines
 const String errorLine = 'Something went wrong! Please try again later...';
 const String successLine = "Progress saved, Thanks for choosing us...";
 
@@ -26,13 +26,26 @@ Future<bool> validateForm({
       btnController?.reset();
     });
     return false;
-  } else {
-    formKey.currentState!.save();
-    return true;
   }
+  formKey.currentState!.save();
+  return true;
 }
 
-void showSuccessNotice(String title, String message) {
+void showSuccessNotice(
+  String title,
+  String message, {
+  Color background = Colors.green,
+  NotificationPosition position = NotificationPosition.top,
+  DismissDirection slideDismissDirection = DismissDirection.up,
+  Duration duration = const Duration(seconds: 4),
+  Widget? trailing,
+  EdgeInsetsGeometry? contentPadding,
+  Color? foreground,
+  double elevation = 16,
+  Key? key,
+  bool autoDismiss = true,
+  BuildContext? context,
+}) {
   showSimpleNotification(
     Text(title),
     subtitle: Text(message),
@@ -40,14 +53,35 @@ void showSuccessNotice(String title, String message) {
       "assets/lottie/success.json",
       repeat: false,
     ),
-    background: Colors.green,
-    position: NotificationPosition.bottom,
-    slideDismissDirection: DismissDirection.down,
-    duration: const Duration(seconds: 4),
+    background: background,
+    position: position,
+    slideDismissDirection: slideDismissDirection,
+    duration: duration,
+    trailing: trailing,
+    contentPadding: contentPadding,
+    foreground: foreground,
+    elevation: elevation,
+    key: key,
+    autoDismiss: autoDismiss,
+    context: context,
   );
 }
 
-void showErrorNotice(String title, String message) {
+void showErrorNotice(
+  String title,
+  String message, {
+  Color background = Colors.red,
+  NotificationPosition position = NotificationPosition.top,
+  DismissDirection slideDismissDirection = DismissDirection.up,
+  Duration duration = const Duration(seconds: 4),
+  Widget? trailing,
+  EdgeInsetsGeometry? contentPadding,
+  Color? foreground,
+  double elevation = 16,
+  Key? key,
+  bool autoDismiss = true,
+  BuildContext? context,
+}) {
   showSimpleNotification(
     Text(title),
     subtitle: Text(message),
@@ -55,14 +89,35 @@ void showErrorNotice(String title, String message) {
       "assets/lottie/error.json",
       repeat: false,
     ),
-    background: Colors.red,
-    position: NotificationPosition.bottom,
-    slideDismissDirection: DismissDirection.down,
-    duration: const Duration(seconds: 4),
+    background: background,
+    position: position,
+    slideDismissDirection: slideDismissDirection,
+    duration: duration,
+    trailing: trailing,
+    contentPadding: contentPadding,
+    foreground: foreground,
+    elevation: elevation,
+    key: key,
+    autoDismiss: autoDismiss,
+    context: context,
   );
 }
 
-void showInfoNotice(String title, String message) {
+void showInfoNotice(
+  String title,
+  String message, {
+  Color? background,
+  NotificationPosition position = NotificationPosition.top,
+  DismissDirection slideDismissDirection = DismissDirection.up,
+  Duration duration = const Duration(seconds: 4),
+  Widget? trailing,
+  EdgeInsetsGeometry? contentPadding,
+  Color? foreground,
+  double elevation = 16,
+  Key? key,
+  bool autoDismiss = true,
+  BuildContext? context,
+}) {
   showSimpleNotification(
     Text(title),
     subtitle: Text(message),
@@ -70,10 +125,17 @@ void showInfoNotice(String title, String message) {
       "assets/lottie/info1.json",
       repeat: true,
     ),
-    background: Colors.blue.shade300,
-    position: NotificationPosition.bottom,
-    slideDismissDirection: DismissDirection.down,
-    duration: const Duration(seconds: 4),
+    background: background ?? Colors.blue.shade300,
+    position: position,
+    slideDismissDirection: slideDismissDirection,
+    duration: duration,
+    trailing: trailing,
+    contentPadding: contentPadding,
+    foreground: foreground,
+    elevation: elevation,
+    key: key,
+    autoDismiss: autoDismiss,
+    context: context,
   );
 }
 

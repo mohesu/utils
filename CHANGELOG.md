@@ -1,3 +1,20 @@
+## 0.0.11
+
+* Empty Widget updated.
+* Dependencies updated.
+
+## 0.0.10+1
+
+* Minor bug fixes and improvements.
+
+## 0.0.10
+
+* Minor bug fixes and improvements.
+
+## 0.0.9+4
+
+* In LaunchUtils class added method `launchMessage` and improved other methods too.
+
 ## 0.0.9+3
 
 * font_awesome_flutter new version added

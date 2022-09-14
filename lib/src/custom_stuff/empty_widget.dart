@@ -1,14 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
+import '../../utils_widget.dart';
+
 class EmptyWidget extends StatelessWidget {
   final String lottieAsset;
-  final String title;
+  final String error;
+  final void Function()? onPressed;
 
   const EmptyWidget({
     Key? key,
     this.lottieAsset = "assets/lottie/no-data.json",
-    this.title = "No data found. ",
+    this.error = "No data found.",
+    this.onPressed,
   }) : super(key: key);
 
   @override
@@ -17,21 +21,26 @@ class EmptyWidget extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
+        Text(
+          error.toTitleCase(),
+          textScaleFactor: 1.5,
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+            color: errorColor(context),
+          ),
+        ),
         LottieBuilder.asset(
           lottieAsset,
           repeat: false,
           fit: BoxFit.contain,
           width: double.infinity,
-          height: MediaQuery.of(context).size.height * 0.6,
+          height: Device.screenSize.height * 0.6,
         ),
-        Text(
-          title.toUpperCase(),
-          textScaleFactor: 1.5,
-          textAlign: TextAlign.center,
-          style: const TextStyle(
-            fontWeight: FontWeight.bold,
-            color: Colors.grey,
-          ),
+        ElevatedButton.icon(
+          label: const Text("Refresh Page"),
+          onPressed: onPressed,
+          icon: const Icon(Icons.refresh),
         ),
       ],
     );
