@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(title: 'Flutter Application to be made'),
     );
   }
 }
@@ -72,14 +72,14 @@ class _MyHomePageState extends State<MyHomePage> {
           title: "appointment.name.toTitleCase()",
           subtitle: "appointment.email",
           buttonText: 'Accept',
-          buttonColor: Colors.green,
+          buttonColor: Colors.grey,
           onUpdate: () async {},
           child: Column(
             children: [
               TextField(
                 decoration: inputDecoration(
                   context,
-                  hintText: "Any Special note for patient?",
+                  hintText: " notes for patient?",
                   labelText: "Remark for Patient",
                   hintMaxLines: 3900,
                 ),
@@ -91,8 +91,8 @@ class _MyHomePageState extends State<MyHomePage> {
               TextField(
                 decoration: inputDecoration(
                   context,
-                  hintText: 'Enter assigned number',
-                  labelText: 'Patient\'s turn number',
+                  hintText: 'Enter  number',
+                  labelText: 'Patient\'s  number',
                 ),
               ),
             ],
@@ -148,7 +148,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
-        tooltip: 'Increment',
+        tooltip: 'Imcreased',
         child: const Icon(Icons.add),
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
