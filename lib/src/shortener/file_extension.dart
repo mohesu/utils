@@ -3,7 +3,8 @@ import 'dart:math';
 import 'package:flutter_image_compress/flutter_image_compress.dart';
 import 'package:universal_io/io.dart';
 
-import 'compressImage.dart';
+import 'compress_image.dart';
+
 
 extension FileExtension on File {
   /// Returns the file name without the extension.

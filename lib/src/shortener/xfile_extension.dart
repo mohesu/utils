@@ -3,7 +3,7 @@ import 'dart:typed_data';
 import 'package:flutter_image_compress/flutter_image_compress.dart';
 import 'package:image_picker/image_picker.dart';
 
-import 'compressImage.dart';
+import 'compress_image.dart';
 
 extension XFileExtension on XFile {
   /// Returns the file name without the extension.

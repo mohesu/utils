@@ -8,7 +8,7 @@ enum FadeDirection {
 }
 
 class FadeIn extends StatefulWidget {
-  FadeIn({
+  const FadeIn({
     Key? key,
     this.fadeDirection = FadeDirection.startToEnd,
     this.offset = 1.0,
@@ -32,7 +32,7 @@ class FadeIn extends StatefulWidget {
   final Curve curve;
 
   @override
-  _FadeInState createState() => _FadeInState();
+  State<FadeIn> createState() => _FadeInState();
 }
 
 class _FadeInState extends State<FadeIn> with SingleTickerProviderStateMixin {
@@ -63,19 +63,19 @@ class _FadeInState extends State<FadeIn> with SingleTickerProviderStateMixin {
     switch (widget.fadeDirection) {
       case FadeDirection.startToEnd:
         begin = Offset(-offset, 0);
-        end = Offset(0, 0);
+        end = const Offset(0, 0);
         break;
       case FadeDirection.endToStart:
         begin = Offset(offset, 0);
-        end = Offset(0, 0);
+        end = const Offset(0, 0);
         break;
       case FadeDirection.topToBottom:
         begin = Offset(0, -offset);
-        end = Offset(0, 0);
+        end = const Offset(0, 0);
         break;
       case FadeDirection.bottomToTop:
         begin = Offset(0, offset);
-        end = Offset(0, 0);
+        end = const Offset(0, 0);
         break;
     }
 
