@@ -30,7 +30,7 @@ export 'src/other/logo_tagline.dart';
 export 'src/other/search_filter_widget.dart';
 export 'src/shortener/error_format.dart';
 export 'src/shortener/capitalization.dart';
-export 'src/shortener/compressImage.dart';
+export 'src/shortener/compress_image.dart';
 export 'src/shortener/dart_helper.dart';
 export 'src/shortener/date_format.dart';
 export 'src/shortener/device_type.dart';

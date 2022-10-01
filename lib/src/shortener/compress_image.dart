@@ -1,19 +1,18 @@
+import 'package:flutter_image_compress/flutter_image_compress.dart';
 import 'dart:typed_data';
 
-import 'package:flutter_image_compress/flutter_image_compress.dart';
-
 Future<Uint8List?> compressImage(
-    String path, {
-      CompressFormat format = CompressFormat.jpeg,
-      int quality = 50,
-      bool autoCorrectionAngle = true,
-      int inSampleSize = 1,
-      bool keepExif = false,
-      int minHeight = 1080,
-      int minWidth = 1920,
-      int numberOfRetries = 5,
-      int rotate = 0,
-    }) {
+  String path, {
+  CompressFormat format = CompressFormat.jpeg,
+  int quality = 50,
+  bool autoCorrectionAngle = true,
+  int inSampleSize = 1,
+  bool keepExif = false,
+  int minHeight = 1080,
+  int minWidth = 1920,
+  int numberOfRetries = 5,
+  int rotate = 0,
+}) {
   return FlutterImageCompress.compressWithFile(
     path,
     format: format,

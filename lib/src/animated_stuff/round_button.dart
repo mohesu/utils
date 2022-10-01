@@ -19,7 +19,7 @@ class RoundButton extends StatefulWidget {
   final double size;
 
   @override
-  _RoundButtonState createState() => _RoundButtonState();
+  State<RoundButton> createState() => _RoundButtonState();
 }
 
 class _RoundButtonState extends State<RoundButton>

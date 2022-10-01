@@ -1,3 +1,7 @@
+## 0.0.12
+- Lints and fixes
+- Code cleanup and refactoring
+
 ## 0.0.11
 
 * Empty Widget updated.

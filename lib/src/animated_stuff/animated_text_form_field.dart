@@ -24,7 +24,7 @@ Interval _getInternalInterval(
 }
 
 class AnimatedTextFormField extends StatefulWidget {
-  AnimatedTextFormField({
+  const AnimatedTextFormField({
     Key? key,
     this.interval = const Interval(0.0, 1.0),
     required this.width,
@@ -70,7 +70,7 @@ class AnimatedTextFormField extends StatefulWidget {
   final TextFieldInertiaDirection? inertiaDirection;
 
   @override
-  _AnimatedTextFormFieldState createState() => _AnimatedTextFormFieldState();
+  State<AnimatedTextFormField> createState() => _AnimatedTextFormFieldState();
 }
 
 class _AnimatedTextFormFieldState extends State<AnimatedTextFormField> {
@@ -118,20 +118,20 @@ class _AnimatedTextFormFieldState extends State<AnimatedTextFormField> {
         end: sign * 15.0,
       ).animate(CurvedAnimation(
         parent: inertiaController,
-        curve: Interval(0, .5, curve: Curves.easeOut),
+        curve: const Interval(0, .5, curve: Curves.easeOut),
         reverseCurve: Curves.easeIn,
       ));
       iconRotationAnimation =
           Tween<double>(begin: 0.0, end: sign * pi / 12 /* ~15deg */)
               .animate(CurvedAnimation(
         parent: inertiaController,
-        curve: Interval(.5, 1.0, curve: Curves.easeOut),
+        curve: const Interval(.5, 1.0, curve: Curves.easeOut),
         reverseCurve: Curves.easeIn,
       ));
       iconTranslateAnimation =
           Tween<double>(begin: 0.0, end: 8.0).animate(CurvedAnimation(
         parent: inertiaController,
-        curve: Interval(.5, 1.0, curve: Curves.easeOut),
+        curve: const Interval(.5, 1.0, curve: Curves.easeOut),
         reverseCurve: Curves.easeIn,
       ));
     }
@@ -253,7 +253,7 @@ class _AnimatedTextFormFieldState extends State<AnimatedTextFormField> {
 }
 
 class AnimatedPasswordTextFormField extends StatefulWidget {
-  AnimatedPasswordTextFormField({
+  const AnimatedPasswordTextFormField({
     Key? key,
     this.interval = const Interval(0.0, 1.0),
     required this.animatedWidth,
@@ -291,7 +291,7 @@ class AnimatedPasswordTextFormField extends StatefulWidget {
   final Iterable<String>? autofillHints;
 
   @override
-  _AnimatedPasswordTextFormFieldState createState() =>
+  State<AnimatedPasswordTextFormField> createState() =>
       _AnimatedPasswordTextFormFieldState();
 }
 
@@ -309,7 +309,7 @@ class _AnimatedPasswordTextFormFieldState
       enabled: widget.enabled,
       autofillHints: widget.autofillHints,
       labelText: widget.labelText,
-      prefixIcon: Icon(FontAwesomeIcons.lock, size: 20),
+      prefixIcon: const Icon(FontAwesomeIcons.lock, size: 20),
       suffixIcon: GestureDetector(
         onTap: () => setState(() => _obscureText = !_obscureText),
         dragStartBehavior: DragStartBehavior.down,
