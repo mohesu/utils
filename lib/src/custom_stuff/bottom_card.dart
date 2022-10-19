@@ -49,8 +49,8 @@ class BottomCard extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 20),
-              const Divider(),
-              if (onViewInfo != null)
+              if (onViewInfo != null) ...[
+                const Divider(),
                 ListTile(
                   leading: const Icon(Icons.info),
                   title: Text(
@@ -61,8 +61,9 @@ class BottomCard extends StatelessWidget {
                   ),
                   onTap: onViewInfo,
                 ),
-              const Divider(),
-              if (onEditInfo != null)
+              ],
+              if (onEditInfo != null) ...[
+                const Divider(),
                 ListTile(
                   leading: const Icon(Icons.edit),
                   title: Text(
@@ -73,8 +74,9 @@ class BottomCard extends StatelessWidget {
                   ),
                   onTap: onEditInfo,
                 ),
-              const Divider(),
-              if (onDeleteInfo != null)
+              ],
+              if (onDeleteInfo != null) ...[
+                const Divider(),
                 ListTile(
                   leading: const Icon(
                     Icons.delete,
@@ -89,17 +91,20 @@ class BottomCard extends StatelessWidget {
                   ),
                   onTap: onDeleteInfo,
                 ),
-              if (onDeleteInfo != null) const Divider(),
-              ListTile(
-                leading: const Icon(Icons.cancel),
-                title: const Text(
-                  "Cancel",
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
+              ],
+              if (onDeleteInfo != null) ...[
+                const Divider(),
+                ListTile(
+                  leading: const Icon(Icons.cancel),
+                  title: const Text(
+                    "Cancel",
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
+                  onTap: () => Navigator.pop(context),
                 ),
-                onTap: () => Navigator.pop(context),
-              ),
+              ],
             ],
           ),
         ),
