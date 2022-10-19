@@ -8,6 +8,8 @@ class BottomCard extends StatelessWidget {
   final void Function()? onDeleteInfo;
   final void Function()? onEditInfo;
   final double? height;
+  final Widget? topWidget;
+  final Widget? bottomWidget;
   const BottomCard({
     Key? key,
     required this.title,
@@ -17,6 +19,8 @@ class BottomCard extends StatelessWidget {
     this.onEditInfo,
     this.height = 450,
     this.cardName = "Info",
+    this.topWidget,
+    this.bottomWidget,
   }) : super(key: key);
 
   @override
@@ -49,6 +53,7 @@ class BottomCard extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 20),
+              topWidget ?? const SizedBox.shrink(),
               if (onViewInfo != null) ...[
                 const Divider(),
                 ListTile(
@@ -92,7 +97,8 @@ class BottomCard extends StatelessWidget {
                   onTap: onDeleteInfo,
                 ),
               ],
-              if (onDeleteInfo != null) ...[
+              bottomWidget ?? const SizedBox.shrink(),
+              ...[
                 const Divider(),
                 ListTile(
                   leading: const Icon(Icons.cancel),

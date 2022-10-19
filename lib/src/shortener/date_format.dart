@@ -20,3 +20,18 @@ extension StringToDateTime on String {
           ).toLocal())
       : this;
 }
+
+extension IntToDateTime on int {
+  String toDateTime({String format = 'dd MMM yyyy | hh:mm aaa'}) => this > 0
+      ? DateFormat(format)
+          .format(DateTime.fromMillisecondsSinceEpoch(this).toLocal())
+      : toString();
+  String toTime() => this > 0
+      ? DateFormat('hh:mm aaa')
+          .format(DateTime.fromMillisecondsSinceEpoch(this).toLocal())
+      : toString();
+  String toDate() => this > 0
+      ? DateFormat('dd MMM yyyy')
+          .format(DateTime.fromMillisecondsSinceEpoch(this).toLocal())
+      : toString();
+}
