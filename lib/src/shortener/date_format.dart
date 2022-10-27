@@ -35,3 +35,10 @@ extension IntToDateTime on int {
           .format(DateTime.fromMillisecondsSinceEpoch(this).toLocal())
       : toString();
 }
+
+extension DateTimeToString on DateTime {
+  String toDateTime({String format = 'dd MMM yyyy | hh:mm aaa'}) =>
+      DateFormat(format).format(toLocal());
+  String get toTime => DateFormat('hh:mm aaa').format(toLocal());
+  String get toDate => DateFormat('dd MMM yyyy').format(toLocal());
+}

@@ -46,4 +46,5 @@ export 'src/shortener/validator.dart';
 export 'src/shortener/xfile_extension.dart';
 export 'src/ui/context_text_style.dart';
 export 'src/ui/context_theme_colors.dart';
+export 'src/ui/context_size.dart';
 export 'src/ui/responsive.dart';
