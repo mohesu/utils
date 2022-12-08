@@ -45,10 +45,18 @@ void showSuccessNotice(
   Key? key,
   bool autoDismiss = true,
   BuildContext? context,
+  TextStyle titleStyle = const TextStyle(color: Colors.white),
+  TextStyle subtitleStyle = const TextStyle(color: Colors.white),
 }) {
   showSimpleNotification(
-    Text(title),
-    subtitle: Text(message),
+    Text(
+      title,
+      style: titleStyle,
+    ),
+    subtitle: Text(
+      message,
+      style: subtitleStyle,
+    ),
     leading: LottieBuilder.asset(
       "assets/lottie/success.json",
       repeat: false,
@@ -81,10 +89,18 @@ void showErrorNotice(
   Key? key,
   bool autoDismiss = true,
   BuildContext? context,
+  TextStyle titleStyle = const TextStyle(color: Colors.white),
+  TextStyle subtitleStyle = const TextStyle(color: Colors.white),
 }) {
   showSimpleNotification(
-    Text(title),
-    subtitle: Text(message),
+    Text(
+      title,
+      style: titleStyle,
+    ),
+    subtitle: Text(
+      message,
+      style: subtitleStyle,
+    ),
     leading: LottieBuilder.asset(
       "assets/lottie/error.json",
       repeat: false,
@@ -117,10 +133,18 @@ void showInfoNotice(
   Key? key,
   bool autoDismiss = true,
   BuildContext? context,
+  TextStyle titleStyle = const TextStyle(color: Colors.white),
+  TextStyle subtitleStyle = const TextStyle(color: Colors.white),
 }) {
   showSimpleNotification(
-    Text(title),
-    subtitle: Text(message),
+    Text(
+      title,
+      style: titleStyle,
+    ),
+    subtitle: Text(
+      message,
+      style: subtitleStyle,
+    ),
     leading: LottieBuilder.asset(
       "assets/lottie/info1.json",
       repeat: true,

@@ -19,6 +19,12 @@ extension StringToDateTime on String {
             int.parse(this),
           ).toLocal())
       : this;
+
+  DateTime get asDateTime =>
+      DateTime.tryParse(this)?.toLocal() ??
+      DateTime.fromMillisecondsSinceEpoch(
+        int.parse(this),
+      ).toLocal();
 }
 
 extension IntToDateTime on int {
@@ -34,6 +40,9 @@ extension IntToDateTime on int {
       ? DateFormat('dd MMM yyyy')
           .format(DateTime.fromMillisecondsSinceEpoch(this).toLocal())
       : toString();
+
+  DateTime get asDateTime =>
+      DateTime.fromMillisecondsSinceEpoch(this).toLocal();
 }
 
 extension DateTimeToString on DateTime {

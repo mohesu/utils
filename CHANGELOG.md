@@ -1,3 +1,6 @@
+## 0.0.13+6
+- alert notification text style option added
+
 ## 0.0.13
 - Bottom card updated
 - Date format updated
