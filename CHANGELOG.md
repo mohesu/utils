@@ -1,3 +1,9 @@
+## 0.0.13+8
+- Overlay_support replaced with overlay_notification
+
+## 0.0.13+7
+- Dependency updates
+
 ## 0.0.13+6
 - alert notification text style option added
 

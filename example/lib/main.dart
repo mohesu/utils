@@ -11,21 +11,23 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // Try running your application with "flutter run". You'll see the
-        // application has a blue toolbar. Then, without quitting the app, try
-        // changing the primarySwatch below to Colors.green and then invoke
-        // "hot reload" (press "r" in the console where you ran "flutter run",
-        // or simply save your changes to "hot reload" in a Flutter IDE).
-        // Notice that the counter didn't reset back to zero; the application
-        // is not restarted.
-        primarySwatch: Colors.blue,
+    return OverlayNotification(
+      child: MaterialApp(
+        title: 'Flutter Demo',
+        theme: ThemeData(
+          // This is the theme of your application.
+          //
+          // Try running your application with "flutter run". You'll see the
+          // application has a blue toolbar. Then, without quitting the app, try
+          // changing the primarySwatch below to Colors.green and then invoke
+          // "hot reload" (press "r" in the console where you ran "flutter run",
+          // or simply save your changes to "hot reload" in a Flutter IDE).
+          // Notice that the counter didn't reset back to zero; the application
+          // is not restarted.
+          primarySwatch: Colors.blue,
+        ),
+        home: const MyHomePage(title: 'Flutter Application to be made'),
       ),
-      home: const MyHomePage(title: 'Flutter Application to be made'),
     );
   }
 }
@@ -59,47 +61,12 @@ class _MyHomePageState extends State<MyHomePage> {
       // _counter without calling setState(), then the build method would not be
       // called again, and so nothing would appear to happen.
       _counter++;
+      showSuccessNotice(
+        "Success",
+        "Success message",
+        leading: const Icon(Icons.check_circle_outline),
+      );
     });
-
-    showModalBottomSheet(
-      context: context,
-      isScrollControlled: true,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(18),
-      ),
-      builder: (builder) {
-        return AppointmentStatusUpdateBottomCard(
-          title: "appointment.name.toTitleCase()",
-          subtitle: "appointment.email",
-          buttonText: 'Accept',
-          buttonColor: Colors.grey,
-          onUpdate: () async {},
-          child: Column(
-            children: [
-              TextField(
-                decoration: inputDecoration(
-                  context,
-                  hintText: " notes for patient?",
-                  labelText: "Remark for Patient",
-                  hintMaxLines: 3900,
-                ),
-                maxLines: 2,
-                minLines: 1,
-                keyboardType: TextInputType.text,
-                textInputAction: TextInputAction.next,
-              ),
-              TextField(
-                decoration: inputDecoration(
-                  context,
-                  hintText: 'Enter  number',
-                  labelText: 'Patient\'s  number',
-                ),
-              ),
-            ],
-          ),
-        );
-      },
-    );
   }
 
   @override
@@ -148,7 +115,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
-        tooltip: 'Imcreased',
+        tooltip: 'Increased',
         child: const Icon(Icons.add),
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );

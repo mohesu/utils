@@ -49,3 +49,4 @@ export 'src/ui/context_theme_colors.dart';
 export 'src/ui/context_size.dart';
 export 'src/ui/responsive.dart';
 export 'src/ui/responsive.dart';
+export 'package:overlay_notification/overlay_notification.dart';
