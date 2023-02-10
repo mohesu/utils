@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import '../ui/context_theme_colors.dart';
 
-
 Widget settingOptionPattern(
     IconData icon, String title, void Function() onTap) {
   return ListTile(
@@ -132,11 +131,13 @@ class CustomListTile extends StatelessWidget {
 class ListTileAmazon extends StatelessWidget {
   final Widget leading;
   final Widget title;
+  final double? width;
   final void Function()? onTap;
   const ListTileAmazon({
     Key? key,
     required this.leading,
     required this.title,
+    this.width,
     this.onTap,
   }) : super(key: key);
 
@@ -146,7 +147,7 @@ class ListTileAmazon extends StatelessWidget {
       decoration: BoxDecoration(
         border: Border(
           top: BorderSide(
-            color: dividerColor(context),
+            color: context.dividerColor,
             width: 1,
           ),
         ),
@@ -154,8 +155,8 @@ class ListTileAmazon extends StatelessWidget {
       child: Row(
         children: [
           Container(
-            color: primaryContainer(context).withOpacity(0.5),
-            width: MediaQuery.of(context).size.width * 0.25,
+            color: context.primaryContainer.withOpacity(0.5),
+            width: width ?? MediaQuery.of(context).size.width * 0.25,
             padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 10),
             alignment: Alignment.centerLeft,
             child: leading,
