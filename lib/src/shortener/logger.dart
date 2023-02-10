@@ -6,7 +6,7 @@ Logger logger = Logger(
     methodCount: 1,
     errorMethodCount: 5,
     lineLength: 90,
-    colors: true,
+    colors: false,
     printEmojis: true,
     printTime: false,
   ),

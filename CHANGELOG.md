@@ -1,3 +1,20 @@
+## 0.0.14
+- EmptyWidget update 
+
+## 0.0.13+8
+- Overlay_support replaced with overlay_notification
+
+## 0.0.13+7
+- Dependency updates
+
+## 0.0.13+6
+- alert notification text style option added
+
+## 0.0.13
+- Bottom card updated
+- Date format updated
+- Dependency updates
+
 ## 0.0.12
 - Lints and fixes
 - Code cleanup and refactoring
