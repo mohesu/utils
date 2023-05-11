@@ -61,11 +61,11 @@ class _MyHomePageState extends State<MyHomePage> {
       // _counter without calling setState(), then the build method would not be
       // called again, and so nothing would appear to happen.
       _counter++;
-      showSuccessNotice(
-        "Success",
-        "Success message",
-        leading: const Icon(Icons.check_circle_outline),
-      );
+      // showSuccessNotice(
+      //   "Success",
+      //   "Success message",
+      //   leading: const Icon(Icons.check_circle_outline),
+      // );
     });
   }
 
@@ -110,6 +110,10 @@ class _MyHomePageState extends State<MyHomePage> {
               '$_counter',
               style: Theme.of(context).textTheme.headline4,
             ),
+            const SkeletonContainer.rounded(
+              height: 100,
+              width: 100,
+            )
           ],
         ),
       ),
