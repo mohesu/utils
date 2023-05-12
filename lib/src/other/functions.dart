@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:loading_icon_button/loading_icon_button.dart';
-import 'package:lottie/lottie.dart';
 import 'package:overlay_notification/overlay_notification.dart';
+import 'package:rive/rive.dart';
 
 /// Global notice lines
 const String errorLine = 'Something went wrong! Please try again later...';
@@ -79,9 +79,10 @@ void showSuccessNotice(
       style: subtitleStyle,
     ),
     leading: leading ??
-        LottieBuilder.asset(
-          "assets/lottie/success.json",
-          repeat: false,
+        const RiveAnimation.asset(
+          "assets/rive/success.json",
+          fit: BoxFit.cover,
+          antialiasing: true,
         ),
     background: background,
     position: position,
@@ -165,9 +166,10 @@ void showErrorNotice(
       style: subtitleStyle,
     ),
     leading: leading ??
-        LottieBuilder.asset(
-          "assets/lottie/error.json",
-          repeat: false,
+        const RiveAnimation.asset(
+          "assets/rive/error.json",
+          fit: BoxFit.cover,
+          antialiasing: true,
         ),
     background: background,
     position: position,
@@ -251,9 +253,10 @@ void showInfoNotice(
       style: subtitleStyle,
     ),
     leading: leading ??
-        LottieBuilder.asset(
-          "assets/lottie/info1.json",
-          repeat: true,
+        const RiveAnimation.asset(
+          "assets/rive/info1.json",
+          fit: BoxFit.cover,
+          antialiasing: true,
         ),
     background: background ?? Colors.blue.shade300,
     position: position,

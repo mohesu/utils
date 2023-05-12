@@ -161,7 +161,7 @@ class ListTileAmazon extends StatelessWidget {
           children: [
             Container(
               color: leftColor ?? context.primaryContainer.withOpacity(0.5),
-              width: MediaQuery.of(context).size.width * (leftWidth ?? 0.25),
+              width: leftWidth ?? MediaQuery.of(context).size.width * 0.25,
               padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 10),
               alignment: Alignment.centerLeft,
               child: leading,

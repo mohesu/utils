@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:lottie/lottie.dart';
+import 'package:rive/rive.dart';
 
 import '../../utils_widget.dart';
 
@@ -13,7 +13,7 @@ class EmptyWidget extends StatelessWidget {
 
   const EmptyWidget({
     Key? key,
-    this.lottieAsset = "assets/lottie/no-data.json",
+    this.lottieAsset = "assets/rive/no-data.json",
     this.title = "No data found.",
     this.titleWidget,
     this.onPressed,
@@ -38,12 +38,15 @@ class EmptyWidget extends StatelessWidget {
               ),
             ),
         image ??
-            LottieBuilder.asset(
-              lottieAsset,
-              repeat: false,
-              fit: BoxFit.contain,
+            SizedBox(
               width: double.infinity,
               height: Device.screenSize.height * 0.6,
+              child: RiveAnimation.asset(
+                lottieAsset,
+                fit: BoxFit.contain,
+                alignment: Alignment.center,
+                antialiasing: true,
+              ),
             ),
         button ??
             ElevatedButton.icon(
