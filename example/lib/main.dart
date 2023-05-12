@@ -66,6 +66,7 @@ class _MyHomePageState extends State<MyHomePage> {
       //   "Success message",
       //   leading: const Icon(Icons.check_circle_outline),
       // );
+      showSuccessNotice("title", " message");
     });
   }
 

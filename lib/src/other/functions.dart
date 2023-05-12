@@ -78,12 +78,16 @@ void showSuccessNotice(
       message,
       style: subtitleStyle,
     ),
-    leading: leading ??
-        const RiveAnimation.asset(
-          "assets/rive/success.riv",
-          fit: BoxFit.cover,
-          antialiasing: true,
-        ),
+    leading: SizedBox(
+      height: 50,
+      width: 50,
+      child: leading ??
+          const RiveAnimation.asset(
+            "assets/rive/success.riv",
+            fit: BoxFit.cover,
+            antialiasing: true,
+          ),
+    ),
     background: background,
     position: position,
     slideDismissDirection: slideDismissDirection,
@@ -165,12 +169,16 @@ void showErrorNotice(
       message,
       style: subtitleStyle,
     ),
-    leading: leading ??
-        const RiveAnimation.asset(
-          "assets/rive/error.riv",
-          fit: BoxFit.cover,
-          antialiasing: true,
-        ),
+    leading: SizedBox(
+      height: 50,
+      width: 50,
+      child: leading ??
+          const RiveAnimation.asset(
+            "assets/rive/error.riv",
+            fit: BoxFit.cover,
+            antialiasing: true,
+          ),
+    ),
     background: background,
     position: position,
     slideDismissDirection: slideDismissDirection,
@@ -252,12 +260,16 @@ void showInfoNotice(
       message,
       style: subtitleStyle,
     ),
-    leading: leading ??
-        const RiveAnimation.asset(
-          "assets/rive/info1.riv",
-          fit: BoxFit.cover,
-          antialiasing: true,
-        ),
+    leading: SizedBox(
+      height: 50,
+      width: 50,
+      child: leading ??
+          const RiveAnimation.asset(
+            "assets/rive/info1.riv",
+            fit: BoxFit.cover,
+            antialiasing: true,
+          ),
+    ),
     background: background ?? Colors.blue.shade300,
     position: position,
     slideDismissDirection: slideDismissDirection,
