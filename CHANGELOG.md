@@ -1,3 +1,8 @@
+## 0.0.20
+- deprecated methods removed
+- notification overlay updated
+- launch utils updated
+
 ## 0.0.14
 - EmptyWidget update 
 

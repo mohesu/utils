@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import '../ui/context_theme_colors.dart';
 
-
 class CustomContainer extends StatelessWidget {
   final Widget child;
   final String tooltip;
@@ -61,7 +60,7 @@ class CustomContainer extends StatelessWidget {
               BoxShadow(
                 color: shadowColor != null
                     ? shadowColor!
-                    : onSurface(context).withOpacity(0.5),
+                    : context.onSurface.withOpacity(0.5),
                 blurRadius: blurRadius != null ? blurRadius! : 5.0,
                 offset: Offset(0, offset != null ? offset! : 0),
               ),

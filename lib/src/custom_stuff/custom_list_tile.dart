@@ -131,14 +131,18 @@ class CustomListTile extends StatelessWidget {
 class ListTileAmazon extends StatelessWidget {
   final Widget leading;
   final Widget title;
-  final double? width;
+  final double? leftWidth;
+  final Color? leftColor;
+  final Color? rightColor;
   final void Function()? onTap;
   const ListTileAmazon({
     Key? key,
     required this.leading,
     required this.title,
-    this.width,
+    this.leftWidth,
     this.onTap,
+    this.leftColor,
+    this.rightColor,
   }) : super(key: key);
 
   @override
@@ -152,27 +156,30 @@ class ListTileAmazon extends StatelessWidget {
           ),
         ),
       ),
-      child: Row(
-        children: [
-          Container(
-            color: context.primaryContainer.withOpacity(0.5),
-            width: width ?? MediaQuery.of(context).size.width * 0.25,
-            padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 10),
-            alignment: Alignment.centerLeft,
-            child: leading,
-          ),
-          Expanded(
-            child: InkWell(
-              onTap: onTap,
-              child: Container(
-                alignment: Alignment.centerLeft,
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 8, vertical: 10),
-                child: title,
+      child: IntrinsicHeight(
+        child: Row(
+          children: [
+            Container(
+              color: leftColor ?? context.primaryContainer.withOpacity(0.5),
+              width: MediaQuery.of(context).size.width * (leftWidth ?? 0.25),
+              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 10),
+              alignment: Alignment.centerLeft,
+              child: leading,
+            ),
+            Expanded(
+              child: InkWell(
+                onTap: onTap,
+                child: Container(
+                  alignment: Alignment.centerLeft,
+                  color: rightColor,
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 8, vertical: 10),
+                  child: title,
+                ),
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

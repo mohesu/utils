@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import '../ui/context_theme_colors.dart';
 
-
 ///
 /// Create a circle button with an icon.
 ///
@@ -47,15 +46,13 @@ class CircleButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final ThemeData theme = Theme.of(context);
-
     return ClipOval(
       child: Material(
         type: MaterialType.button,
-        color: color ?? theme.toggleableActiveColor,
+        color: color ?? context.primary,
         child: InkWell(
-          splashColor: splashColor ?? theme.splashColor,
-          hoverColor: secondaryHeaderColor(context),
+          splashColor: splashColor ?? context.splashColor,
+          hoverColor: context.secondaryHeaderColor,
           onTap: onPressed,
           child: Padding(
             padding: padding,

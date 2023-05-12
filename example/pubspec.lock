@@ -220,10 +220,10 @@ packages:
     dependency: transitive
     description:
       name: overlay_notification
-      sha256: "89b60b58c6b932b714b67c25c8cbfbac52618506c2d4b98bfdb192cd0683bacd"
+      sha256: "622eeaaff2db2e25abea154c9eff4fcd17826b90059bb2cce27b39f306d15f3a"
       url: "https://pub.dev"
     source: hosted
-    version: "0.0.2"
+    version: "23.5.12"
   path:
     dependency: transitive
     description:
@@ -467,7 +467,7 @@ packages:
       path: ".."
       relative: true
     source: path
-    version: "0.0.18"
+    version: "0.0.19"
   vector_math:
     dependency: transitive
     description:
