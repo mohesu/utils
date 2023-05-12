@@ -13,7 +13,7 @@ class EmptyWidget extends StatelessWidget {
 
   const EmptyWidget({
     Key? key,
-    this.lottieAsset = "assets/rive/no-data.json",
+    this.lottieAsset = "assets/rive/no-data.riv",
     this.title = "No data found.",
     this.titleWidget,
     this.onPressed,

@@ -80,7 +80,7 @@ void showSuccessNotice(
     ),
     leading: leading ??
         const RiveAnimation.asset(
-          "assets/rive/success.json",
+          "assets/rive/success.riv",
           fit: BoxFit.cover,
           antialiasing: true,
         ),
@@ -167,7 +167,7 @@ void showErrorNotice(
     ),
     leading: leading ??
         const RiveAnimation.asset(
-          "assets/rive/error.json",
+          "assets/rive/error.riv",
           fit: BoxFit.cover,
           antialiasing: true,
         ),
@@ -254,7 +254,7 @@ void showInfoNotice(
     ),
     leading: leading ??
         const RiveAnimation.asset(
-          "assets/rive/info1.json",
+          "assets/rive/info1.riv",
           fit: BoxFit.cover,
           antialiasing: true,
         ),
