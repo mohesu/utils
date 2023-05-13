@@ -131,6 +131,8 @@ class CustomListTile extends StatelessWidget {
 class ListTileAmazon extends StatelessWidget {
   final Widget leading;
   final Widget title;
+  final Widget? trailing;
+  final Widget? overrideTitle;
   final double? leftWidth;
   final Color? leftColor;
   final Color? rightColor;
@@ -139,6 +141,8 @@ class ListTileAmazon extends StatelessWidget {
     Key? key,
     required this.leading,
     required this.title,
+    this.trailing,
+    this.overrideTitle,
     this.leftWidth,
     this.onTap,
     this.leftColor,
@@ -174,7 +178,14 @@ class ListTileAmazon extends StatelessWidget {
                   color: rightColor,
                   padding:
                       const EdgeInsets.symmetric(horizontal: 8, vertical: 10),
-                  child: title,
+                  child: overrideTitle ??
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Expanded(child: title),
+                          trailing ?? const Icon(Icons.launch),
+                        ],
+                      ),
                 ),
               ),
             ),
