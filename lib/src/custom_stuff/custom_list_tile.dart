@@ -183,7 +183,10 @@ class ListTileAmazon extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Expanded(child: title),
-                          trailing ?? const Icon(Icons.launch),
+                          trailing ??
+                              ((onTap != null)
+                                  ? const Icon(Icons.launch)
+                                  : const SizedBox.shrink()),
                         ],
                       ),
                 ),
