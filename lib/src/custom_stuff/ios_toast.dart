@@ -27,7 +27,7 @@ class IosStyleToast extends StatelessWidget {
             style: style ??
                 Theme.of(context)
                     .textTheme
-                    .bodyText2!
+                    .bodyMedium!
                     .copyWith(color: foregroundColor),
             child: Padding(
               padding: padding,

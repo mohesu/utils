@@ -1,3 +1,7 @@
+## 1.0.2
+- deprecated methods removed
+- dependency updates
+
 ## 0.0.20
 - deprecated methods removed
 - notification overlay updated

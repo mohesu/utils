@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class AppointmentStatusUpdateBottomCard extends StatelessWidget {
+class StatusUpdateBottomCard extends StatelessWidget {
   final String title;
   final String subtitle;
   final String buttonText;
   final Color buttonColor;
   final Widget child;
   final void Function() onUpdate;
-  const AppointmentStatusUpdateBottomCard({
+  const StatusUpdateBottomCard({
     Key? key,
     required this.title,
     required this.subtitle,
@@ -36,7 +36,7 @@ class AppointmentStatusUpdateBottomCard extends StatelessWidget {
               ),
               const SizedBox(height: 20),
               Text(
-                "$buttonText Appointment",
+                "$buttonText Collection",
                 textScaleFactor: 1.5,
                 textAlign: TextAlign.center,
                 style: const TextStyle(
@@ -44,7 +44,7 @@ class AppointmentStatusUpdateBottomCard extends StatelessWidget {
                 ),
               ),
               Text(
-                "Are you sure you want to $buttonText this appointment?",
+                "Are you sure you want to $buttonText this collection?",
                 textAlign: TextAlign.center,
                 textScaleFactor: 1.1,
                 style: const TextStyle(

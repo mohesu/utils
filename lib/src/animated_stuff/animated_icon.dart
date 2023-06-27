@@ -85,7 +85,7 @@ class _AnimatedIconButtonState extends State<AnimatedIconButton>
     final buttonTheme = theme.floatingActionButtonTheme;
 
     _color = widget.color ?? buttonTheme.backgroundColor;
-    _loadingColor = widget.loadingColor ?? theme.toggleableActiveColor;
+    _loadingColor = widget.loadingColor ?? theme.primaryColor;
 
     _colorAnimation = ColorTween(
       begin: _color,
@@ -130,14 +130,14 @@ class _AnimatedIconButtonState extends State<AnimatedIconButton>
   /// sets width and size animation
   void _updateWidth() {
     final theme = Theme.of(context);
-    final fontSize = theme.textTheme.button!.fontSize!;
+    final fontSize = theme.textTheme.labelLarge!.fontSize!;
     final renderParagraph = RenderParagraph(
       TextSpan(
         text: widget.tooltip,
         style: TextStyle(
           fontSize: fontSize,
-          fontWeight: theme.textTheme.button!.fontWeight,
-          letterSpacing: theme.textTheme.button!.letterSpacing,
+          fontWeight: theme.textTheme.labelLarge!.fontWeight,
+          letterSpacing: theme.textTheme.labelLarge!.letterSpacing,
         ),
       ),
       textDirection: TextDirection.ltr,

@@ -40,7 +40,7 @@ class EmptyWidget extends StatelessWidget {
         image ??
             SizedBox(
               width: double.infinity,
-              height: Device.screenSize.height * 0.6,
+              height: MediaQuery.of(context).size.height / 2.5,
               child: RiveAnimation.asset(
                 lottieAsset,
                 fit: BoxFit.contain,

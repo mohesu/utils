@@ -5,6 +5,7 @@ import 'dart:math' as math;
 
 import 'package:universal_io/io.dart';
 
+@Deprecated('Device is deprecated and will be removed in the next version.')
 class Device {
   static double devicePixelRatio = ui.window.devicePixelRatio;
   static ui.Size size = ui.window.physicalSize;
