@@ -1,3 +1,8 @@
+## 1.0.3
+- deprecated methods removed
+- dependency updates
+- responsive scaffold added
+
 ## 1.0.2
 - deprecated methods removed
 - dependency updates
