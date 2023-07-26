@@ -1,6 +1,6 @@
 import 'package:logger/logger.dart';
 
-var loggerLevel = Level.verbose;
+Level loggerLevel = Level.trace;
 Logger logger = Logger(
   printer: PrettyPrinter(
     methodCount: 1,

@@ -1,3 +1,5 @@
+## 1.0.4
+- Logger Level updated
 ## 1.0.3
 - deprecated methods removed
 - dependency updates
