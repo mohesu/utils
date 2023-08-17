@@ -1,14 +1,14 @@
 # This is a generated file; do not edit or check into version control.
-path_provider=/Users/arvind/.pub-cache/hosted/pub.dev/path_provider-2.0.15/
-path_provider_android=/Users/arvind/.pub-cache/hosted/pub.dev/path_provider_android-2.0.27/
-path_provider_foundation=/Users/arvind/.pub-cache/hosted/pub.dev/path_provider_foundation-2.2.3/
-path_provider_linux=/Users/arvind/.pub-cache/hosted/pub.dev/path_provider_linux-2.1.11/
-path_provider_windows=/Users/arvind/.pub-cache/hosted/pub.dev/path_provider_windows-2.1.7/
-rive_common=/Users/arvind/.pub-cache/hosted/pub.dev/rive_common-0.2.2/
+path_provider=/Users/arvind/.pub-cache/hosted/pub.dev/path_provider-2.1.0/
+path_provider_android=/Users/arvind/.pub-cache/hosted/pub.dev/path_provider_android-2.1.0/
+path_provider_foundation=/Users/arvind/.pub-cache/hosted/pub.dev/path_provider_foundation-2.3.0/
+path_provider_linux=/Users/arvind/.pub-cache/hosted/pub.dev/path_provider_linux-2.2.0/
+path_provider_windows=/Users/arvind/.pub-cache/hosted/pub.dev/path_provider_windows-2.2.0/
+rive_common=/Users/arvind/.pub-cache/hosted/pub.dev/rive_common-0.2.6/
 url_launcher=/Users/arvind/.pub-cache/hosted/pub.dev/url_launcher-6.1.12/
-url_launcher_android=/Users/arvind/.pub-cache/hosted/pub.dev/url_launcher_android-6.0.36/
+url_launcher_android=/Users/arvind/.pub-cache/hosted/pub.dev/url_launcher_android-6.0.38/
 url_launcher_ios=/Users/arvind/.pub-cache/hosted/pub.dev/url_launcher_ios-6.1.4/
 url_launcher_linux=/Users/arvind/.pub-cache/hosted/pub.dev/url_launcher_linux-3.0.5/
-url_launcher_macos=/Users/arvind/.pub-cache/hosted/pub.dev/url_launcher_macos-3.0.5/
-url_launcher_web=/Users/arvind/.pub-cache/hosted/pub.dev/url_launcher_web-2.0.17/
-url_launcher_windows=/Users/arvind/.pub-cache/hosted/pub.dev/url_launcher_windows-3.0.6/
+url_launcher_macos=/Users/arvind/.pub-cache/hosted/pub.dev/url_launcher_macos-3.0.6/
+url_launcher_web=/Users/arvind/.pub-cache/hosted/pub.dev/url_launcher_web-2.0.18/
+url_launcher_windows=/Users/arvind/.pub-cache/hosted/pub.dev/url_launcher_windows-3.0.7/

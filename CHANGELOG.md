@@ -1,101 +1,116 @@
+## 1.0.5
+
+- skeleton_text removed
+
 ## 1.0.4
+
 - Logger Level updated
+
 ## 1.0.3
+
 - deprecated methods removed
 - dependency updates
 - responsive scaffold added
 
 ## 1.0.2
+
 - deprecated methods removed
 - dependency updates
 
 ## 0.0.20
+
 - deprecated methods removed
 - notification overlay updated
 - launch utils updated
 
 ## 0.0.14
-- EmptyWidget update 
+
+- EmptyWidget update
 
 ## 0.0.13+8
+
 - Overlay_support replaced with overlay_notification
 
 ## 0.0.13+7
+
 - Dependency updates
 
 ## 0.0.13+6
+
 - alert notification text style option added
 
 ## 0.0.13
+
 - Bottom card updated
 - Date format updated
 - Dependency updates
 
 ## 0.0.12
+
 - Lints and fixes
 - Code cleanup and refactoring
 
 ## 0.0.11
 
-* Empty Widget updated.
-* Dependencies updated.
+- Empty Widget updated.
+- Dependencies updated.
 
 ## 0.0.10+1
 
-* Minor bug fixes and improvements.
+- Minor bug fixes and improvements.
 
 ## 0.0.10
 
-* Minor bug fixes and improvements.
+- Minor bug fixes and improvements.
 
 ## 0.0.9+4
 
-* In LaunchUtils class added method `launchMessage` and improved other methods too.
+- In LaunchUtils class added method `launchMessage` and improved other methods too.
 
 ## 0.0.9+3
 
-* font_awesome_flutter new version added
+- font_awesome_flutter new version added
 
 ## 0.0.9+2
 
-* keyboard bug fixed
+- keyboard bug fixed
 
 ## 0.0.9+1
 
-* loading_icon_button updated
+- loading_icon_button updated
 
 ## 0.0.9
 
-* loading_icon_button added
+- loading_icon_button added
 
 ## 0.0.8
 
-* Custom toast added
+- Custom toast added
 
 ## 0.0.7
 
-* InputDecoration updated
+- InputDecoration updated
 
 ## 0.0.6
 
-* file exported
+- file exported
 
 ## 0.0.5
 
-* card updated
+- card updated
 
 ## 0.0.4
 
-* font awesome icon's version ^9.1.0
+- font awesome icon's version ^9.1.0
 
 ## 0.0.3
 
-* Name changed.
+- Name changed.
 
 ## 0.0.2
 
-* update readme.
+- update readme.
 
 ## 0.0.1
 
-* initial release.
+- initial release.
