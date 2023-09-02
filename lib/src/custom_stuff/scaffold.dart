@@ -4,7 +4,6 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:utils_widget/utils_widget.dart';
 
-
 // ignore_for_file: comment_references
 
 // The default width of the side menu when expanded to full menu.
@@ -402,7 +401,6 @@ class ResponsiveScaffold extends StatefulWidget {
   /// The state of this widget is persisted in a [RestorationBucket] claimed
   /// from the surrounding [RestorationScope] using the provided restoration ID.
   final String? restorationId;
-
 
   final List<Widget>? actions;
   @override
@@ -845,22 +843,16 @@ class _MenuItem extends StatelessWidget {
     // custom elements in your app they react to theme changes and use the theme
     // colors. You can make elaborate hues and opacities of the colors in the
     // theme's color schemes, like here:
-    final Color iconColor = enabled
+    final Color iconColor = selected
         ? isLight
-            ? Color.alphaBlend(
-                context.secondary.withAlpha(0x99),
-                theme.colorScheme.onSurface,
-              ).withOpacity(0.6)
-            : Color.alphaBlend(
-                context.secondary.withAlpha(0x7F),
-                theme.colorScheme.onSurface,
-              ).withOpacity(0.6)
+            ? context.onBackground.withOpacity(0.8)
+            : context.onBackground.withOpacity(0.8)
         : context.secondary;
-    final Color textColor = enabled
-        ? context.onSurface.withAlpha(0xCC)
-        : context.secondary.withAlpha(0xCC);
-    final Color selectedColor =
-        enabled ? Colors.transparent : context.primary.withOpacity(0.2);
+    final Color textColor =
+        enabled ? context.onBackground : context.onBackground;
+    final Color selectedColor = selected
+        ? context.primary.withOpacity(0.6)
+        : context.primary.withOpacity(0.2);
     // The M3 guide calls for 12dp padding after the selection indicator on
     // the menu highlight in a Drawer or side menu. We can do that, but we
     // have such a narrow rail for phone size, so at rail sizes we will make it
